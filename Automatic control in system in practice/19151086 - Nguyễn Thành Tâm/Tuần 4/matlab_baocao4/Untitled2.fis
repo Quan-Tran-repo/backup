@@ -1,0 +1,33 @@
+[System]
+Name='Untitled2'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='nhietdo'
+Range=[0 1]
+NumMFs=3
+MF1='cold':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='medium':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='hot':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='vantocquat'
+Range=[0 1]
+NumMFs=3
+MF1='Nhanh':'constant',[600]
+MF2='Chậm':'constant',[300]
+MF3='Zero':'constant',[0]
+
+[Rules]
+1, 3 (1) : 1
+2, 2 (1) : 1
+3, 1 (1) : 1

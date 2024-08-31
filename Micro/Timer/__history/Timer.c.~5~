@@ -1,0 +1,50 @@
+#include <16F887.h>
+#FUSES NOWDT, PUT, HS, NOPROTECT, NOLVP
+#USE DELAY(CLOCK=20M)
+#define RS pin_e0
+#define RW pin_e1
+#define E  pin_e2
+void lcd_command(unsigned int8 cm)
+   {
+      output_low(RW);
+      output_low(RS);
+      output_d(cm);
+      output_low(e);
+      output_high(e);
+      delay_ms(1);
+   }
+void lcd_data(unsigned int8 dt)
+   {
+      output_low(RW);
+      output_high(RS);
+      output_d(dt);
+      output_low(e);
+      output_high(e);      
+      delay_ms(1);
+   }
+void lcd_setup()
+   {
+      delay_ms(5);
+      lcd_command(0x38);
+      delay_ms(5);
+      lcd_command(0x0C);
+      lcd_command(0x06);
+      lcd_command(0x01);
+      delay_ms(2);
+   }
+void main()
+{    
+   unsigned int8 prod;
+   set_tris_d(0);
+   set_tris_e(0);
+   set_tris_a(0);
+   setup_timer_0(T0_EXT_H_TO_L|T0_DIV_1);
+   set_timer0(0);
+   while (true)
+      {
+         prod=get_timer0();
+         lcd_command(0xc7);
+         lcd_data(prod/10 + 0x30);
+         lcd_data(prod%10 + 0x30);
+      }
+}

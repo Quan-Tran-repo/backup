@@ -1,0 +1,31 @@
+#include <16F887.h>
+#FUSES NOWDT, HS, NOPUT, NOPROTECT, NOLVP
+#USE DELAY(CLOCK=20M)
+const unsigned int8 Anode[10]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
+const unsigned int8 Cathode[10]={0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F};
+void id()
+{
+   output_c(Cathode[1]);delay_ms(200);output_low(pin_d0);delay_ms(200);output_high(pin_d0);
+   output_c(Cathode[9]);delay_ms(200);output_low(pin_d1);delay_ms(200);output_high(pin_d1);
+   output_c(Cathode[1]);delay_ms(200);output_low(pin_d2);delay_ms(200);output_high(pin_d2);
+   output_c(Cathode[5]);delay_ms(200);output_low(pin_d3);delay_ms(200);output_high(pin_d3);
+   output_c(Cathode[1]);delay_ms(200);output_low(pin_d4);delay_ms(200);output_high(pin_d4);
+   output_c(Cathode[0]);delay_ms(200);output_low(pin_d5);delay_ms(200);output_high(pin_d5);
+   output_c(Cathode[7]);delay_ms(200);output_low(pin_d6);delay_ms(200);output_high(pin_d6);
+   output_c(Cathode[8]);delay_ms(200);output_low(pin_d7);delay_ms(200);output_high(pin_d7);
+}
+void main()
+{
+   int8 i=0;
+   set_tris_c(0x00);
+   set_tris_d(0x00);
+   set_tris_a(0xFF);
+   output_c(0xFF);
+   output_d(0xFF);
+   while(true)
+   {
+   for (i=0;i<10;i++)
+   output_c(Cathode[i]);
+   delay_ms(200);
+   }
+}

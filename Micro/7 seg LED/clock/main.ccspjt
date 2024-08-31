@@ -1,0 +1,46 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\7 seg LED\clock\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=06-04-2022
+D1_L=11
+D1_L1=[50560]Project Opened.
+D1_L2=[50608]Started Editing.
+D1_L3=[51144]Stopped Editing.
+D1_L4=[51293]Started Editing.
+D1_L5=[51597]Stopped Editing.
+D1_L6=[51609]Started Editing.
+D1_L7=[52204]Stopped Editing.
+D1_L8=[52286]Started Editing.
+D1_L9=[52596]Stopped Editing.
+D1_L10=[53704]Started Editing.
+D1_L11=[54871]Stopped Editing.
+
+[Opened Files]
+1=main.c
+t1=11
+Count=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=5
+[Units]
+Count=1
+1=main (main)

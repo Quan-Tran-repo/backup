@@ -1,0 +1,71 @@
+[PROJECT]
+Target=up_down.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=up_down.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\7 seg LED\up_down]
+Type=4
+[mru-list]
+1=up_down.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=4
+D1=23-03-2022
+D1_L=8
+D1_L1=[53863]Project Opened.
+D1_L2=[53867]Started Editing.
+D1_L3=[55312]Stopped Editing.
+D1_L4=[61940]Started Editing.
+D1_L5=[62361]Stopped Editing.
+D1_L6=[62741]Started Editing.
+D1_L7=[63227]Stopped Editing.
+TotalEdit=27
+TotalDebug=0
+D1_E=25
+D1_D=0
+D1_L8=[73819]Project Closed.
+D2=30-03-2022
+D2_L=12
+D2_L1=[55052]Project Opened.
+D2_L2=[55221]Started Editing.
+D2_L3=[55779]Stopped Editing.
+D2_L4=[55788]Started Editing.
+D2_L5=[57342]Stopped Editing.
+D2_L6=[57444]Started Editing.
+D2_L7=[57874]Stopped Editing.
+D2_L8=[58354]Started Editing.
+D2_L9=[58528]Project Opened.
+D2_L10=[58535]Started Editing.
+D2_L11=[58607]Stopped Editing.
+D2_E=2
+D2_D=0
+D2_L12=[58611]Project Closed.
+D3=31-03-2022
+D3_L=2
+D3_L1=[43061]Project Opened.
+D3_L2=[43134]Project Closed.
+D4=06-04-2022
+D4_L=2
+D4_L1=[38390]Project Opened.
+D4_L2=[38596]Project Closed.
+
+[Opened Files]
+1=up_down.c
+t1=1
+Count=1
+[up_down.c]
+Type=4
+
+[defines]
+buildcount=32
+[Units]
+Count=1
+1=up_down (main)

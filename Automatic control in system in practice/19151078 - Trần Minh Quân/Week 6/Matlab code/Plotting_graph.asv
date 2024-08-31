@@ -1,0 +1,137 @@
+clc; close all; clear all;
+figure;
+plot(out.Dat1{1}.Values); hold on;
+plot(out.Dat2{1}.Values); hold on;
+plot(out.Dat3{1}.Values); hold on;
+plot(out.Dat4{1}.Values); hold on;
+grid on;
+%%Steady state error (Ess)
+e1=100-out.Dat1{1}.Values.Data(1501,1);
+e2=100-out.Dat2{1}.Values.Data(1501,1);
+e3=100-out.Dat3{1}.Values.Data(1501,1);
+e4=100-out.Dat4{1}.Values.Data(1501,1);
+Ess=[e1 e2 e3 e4];
+Ess
+%% POT
+max1=max(out.Dat1{1}.Values.Data);ss1=out.Dat1{1}.Values.Data(1501,1);
+max2=max(out.Dat2{1}.Values.Data);ss2=out.Dat2{1}.Values.Data(1501,1);
+max3=max(out.Dat3{1}.Values.Data);ss3=out.Dat3{1}.Values.Data(1501,1);
+max4=max(out.Dat4{1}.Values.Data);ss4=out.Dat4{1}.Values.Data(1501,1);
+POT1=(max1-ss1)/ss1;
+POT2=(max2-ss2)/ss2;
+POT3=(max3-ss3)/ss3;
+POT4=(max4-ss4)/ss4;
+POT=[POT1 POT2 POT3 POT4]
+%% Rise time
+temp=[];
+temp1=[];
+for i =1:1501
+    P1=out.Dat1{1}.Values.Data(i,1);
+    Q1=out.Dat1{1}.Values.Data(1501,1);
+    if (P1<11*Q1/100) && (P1>9*Q1/100)
+        temp=[temp i];
+    end
+    if (P1<90.1*Q1/100) && (P1>89*Q1/100)
+        temp1=[temp1 i];
+    end
+end
+T_10=min(temp);
+T_90=max(temp1);
+R1=T_90-T_10; %Rise time 1
+temp=[];
+temp1=[];
+for i =1:1501
+    P2=out.Dat2{1}.Values.Data(i,1);
+    Q2=out.Dat2{1}.Values.Data(1501,1);
+    if (P2<11*Q2/100) && (P2>9*Q2/100)
+        temp=[temp i];
+    end
+    if (P2<90.1*Q2/100) && (P2>89*Q2/100)
+        temp1=[temp1 i];
+    end
+end
+T_10=min(temp);
+T_90=max(temp1);
+R2=T_90-T_10; %Rise time 2
+temp=[];
+temp1=[];
+for i =1:1501
+    P3=out.Dat3{1}.Values.Data(i,1);
+    Q3=out.Dat3{1}.Values.Data(1501,1);
+    if (P3<11*Q3/100) && (P3>9*Q3/100)
+        temp=[temp i];
+    end
+    if (P3<90.1*Q3/100) && (P3>89*Q3/100)
+        temp1=[temp1 i];
+    end
+end
+T_10=min(temp);
+T_90=max(temp1);
+R3=T_90-T_10; %Rise time 3
+temp=[];
+temp1=[];
+for i =1:1501
+    P4=out.Dat4{1}.Values.Data(i,1);
+    Q4=out.Dat4{1}.Values.Data(1501,1);
+    if (P4<11*Q4/100) && (P4>9*Q4/100)
+        temp=[temp i];
+    end
+    if (P4<90.1*Q4/100) && (P4>89*Q4/100)
+        temp1=[temp1 i];
+    end
+end
+T_10=min(temp);
+T_90=max(temp1);
+R4=T_90-T_10; %Rise time 4
+R=[R1 R2 R3 R4]
+%% Settling time
+S=[];
+for i =1:1501
+    P1=out.Dat1{1}.Values.Data(i,1);
+    Q1=out.Dat1{1}.Values.Data(1501,1);
+    if (P1<98.3*Q1/100) && (P1>97.8*Q1/100)
+        temp=[temp P1];
+    end
+    if (P1<102.3*Q1/100) && (P1>101.7*Q1/100)
+        temp=[temp P1];
+    end
+end
+S1=max(temp);
+temp=[];
+for i =1:1501
+    P2=out.Dat2{1}.Values.Data(i,1);
+    Q2=out.Dat2{1}.Values.Data(1501,1);
+    if (P2<98.3*Q2/100) && (P2>97.8*Q2/100)
+        temp=[temp P2];
+    end
+    if (P2<102.3*Q2/100) && (P2>101.7*Q2/100)
+        temp=[temp P2];
+    end
+end
+S2=max(temp);
+temp=[];
+for i =1:1501
+    P3=out.Dat3{1}.Values.Data(i,1);
+    Q3=out.Dat3{1}.Values.Data(1501,1);
+    if (P3<98.3*Q3/100) && (P3>97.8*Q3/100)
+        temp=[temp P3];
+    end
+    if (P3<102.3*Q3/100) && (P3>101.7*Q3/100)
+        temp=[temp P3];
+    end
+end
+S3=max(temp);
+temp=[];
+for i =1:1501
+    P4=out.Dat4{1}.Values.Data(i,1);
+    Q4=out.Dat4{1}.Values.Data(1501,1);
+    if (P4<98.3*Q4/100) && (P4>97.8*Q4/100)
+        temp=[temp P4];
+    end
+    if (P4<102.3*Q4/100) && (P4>101.7*Q4/100)
+        temp=[temp P4];
+    end
+end
+S4=max(temp);
+temp=[];
+S=[S1 S2 S3 S4]

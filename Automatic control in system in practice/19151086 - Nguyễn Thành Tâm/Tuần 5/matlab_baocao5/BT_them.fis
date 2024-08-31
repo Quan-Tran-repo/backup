@@ -1,0 +1,47 @@
+[System]
+Name='BT_them'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='sai_so'
+Range=[-1 1]
+NumMFs=3
+MF1='NE':'trimf',[-10000 -1 0]
+MF2='ZE':'trimf',[-1 0 1]
+MF3='PO':'trimf',[0 1 10000]
+
+[Input2]
+Name='sai_so_so_sanh'
+Range=[-1 1]
+NumMFs=3
+MF1='NE':'trimf',[-1.833 -1 0]
+MF2='ZE':'trimf',[-1 0 1]
+MF3='PO':'trimf',[0 1 1.833]
+
+[Output1]
+Name='nhietdo'
+Range=[0 1]
+NumMFs=3
+MF1='NE':'trimf',[-0.4167 0 0.5]
+MF2='ZE':'trimf',[0 0.5 1]
+MF3='PO':'trimf',[0.5 1 1.417]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 2 (1) : 1
+3 1, 2 (1) : 1
+3 2, 2 (1) : 1
+3 3, 3 (1) : 1

@@ -1,0 +1,107 @@
+#include <16F887.h>
+#FUSES NOWDT, PUT, HS, NOPROTECT, NOLVP
+#USE DELAY(CLOCK=20M)
+#define RS pin_e0
+#define RW pin_e1
+#define E  pin_e2
+unsigned int16 i;
+void lcd_command(unsigned int8 cm)
+   {
+      output_low(RW);
+      output_low(RS);
+      output_d(cm);
+      output_low(e);
+      output_high(e);
+      delay_ms(1);
+   }
+void lcd_data(unsigned int8 dt)
+   {
+      output_low(RW);
+      output_high(RS);
+      output_d(dt);
+      output_low(e);
+      output_high(e);      
+      delay_ms(1);
+   }
+void lcd_setup()
+   {
+      delay_ms(5);
+      lcd_command(0x38);
+      delay_ms(5);
+      lcd_command(0x0C);
+      lcd_command(0x06);
+      lcd_command(0x01);
+      delay_ms(2);
+   }
+void mode1()
+   {
+      lcd_command(0x38);
+      // Name
+      lcd_command(0x81);lcd_data(0x54);delay_ms(10); 
+      lcd_command(0x82);lcd_data(0x72);delay_ms(10);
+      lcd_command(0x83);lcd_data(0x61);delay_ms(10);
+      lcd_command(0x84);lcd_data(0x6E);delay_ms(10);
+      lcd_command(0x86);lcd_data(0x4D);delay_ms(10);
+      lcd_command(0x87);lcd_data(0x69);delay_ms(10);
+      lcd_command(0x88);lcd_data(0x6E);delay_ms(10);
+      lcd_command(0x89);lcd_data(0x68);delay_ms(10);
+      lcd_command(0x8B);lcd_data(0x51);delay_ms(10);
+      lcd_command(0x8C);lcd_data(0x75);delay_ms(10);
+      lcd_command(0x8D);lcd_data(0x61);delay_ms(10);
+      lcd_command(0x8E);lcd_data(0x6E);delay_ms(10);
+      // ID
+      lcd_command(0xC4);lcd_data(0x31);delay_ms(10);
+      lcd_command(0xC5);lcd_data(0x39);delay_ms(10);
+      lcd_command(0xC6);lcd_data(0x31);delay_ms(10);
+      lcd_command(0xC7);lcd_data(0x35);delay_ms(10);
+      lcd_command(0xC8);lcd_data(0x31);delay_ms(10);
+      lcd_command(0xC9);lcd_data(0x30);delay_ms(10);
+      lcd_command(0xCA);lcd_data(0x37);delay_ms(10);
+      lcd_command(0xCB);lcd_data(0x38);delay_ms(10);
+      
+    }
+void mode2()
+   {
+      for (i=0;i<1000;i++)
+         {
+            lcd_command(0x80);lcd_data(i/100 + 0x30);
+            lcd_command(0x88);lcd_data(i/10 + 0x30);
+            lcd_command(0x8F);lcd_data(i%10 + 0x30);
+            if (i==999)
+               {i=-1;}
+            delay_ms(100);      
+         }
+   }
+void mode3()
+   {  
+      lcd_command(0x38);
+      for (i=999;i>0;i--)
+         {
+            lcd_command(0xC0);lcd_data(i/100 + 0x30);
+            lcd_command(0xC8);lcd_data(i/10 + 0x30);
+            lcd_command(0xCF);lcd_data(i%10 + 0x30);
+            if (i==0)
+               {i=1000;}
+            delay_ms(100);
+         }
+   }
+
+   
+void main()
+   {  
+      set_tris_d(0x00);
+      set_tris_e(0xFF);
+      lcd_setup();
+      while (true)
+         {
+            if (!input(pin_a0))
+               
+            mode3();
+         }
+    }
+      
+      
+      
+   
+
+      

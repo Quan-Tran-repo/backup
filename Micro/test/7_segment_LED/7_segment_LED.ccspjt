@@ -1,0 +1,94 @@
+[PROJECT]
+Target=7_segment_LED.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=7_segment_LED.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+[C:\Users\Admin\Documents\Micro\test\7_segment_LED]
+Type=4
+[mru-list]
+1=7_segment_LED.c
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[ProjectLog]
+Days=1
+D1=23-03-2022
+D1_L=16
+D1_L1=[38602]Project Opened.
+D1_L2=[38620]Started Editing.
+D1_L3=[38969]Stopped Editing.
+D1_L4=[39000]Started Editing.
+D1_L5=[41211]Stopped Editing.
+D1_L6=[41745]Started Editing.
+D1_L7=[42087]Stopped Editing.
+D1_L8=[42253]Started Editing.
+D1_L9=[42652]Stopped Editing.
+D1_L10=[52562]Started Editing.
+D1_L11=[52982]Stopped Editing.
+D1_L12=[53451]Started Editing.
+D1_L13=[53583]Stopped Editing.
+TotalEdit=44
+TotalDebug=0
+D1_E=44
+D1_D=0
+D1_L14=[53674]Started Editing.
+D1_L15=[53863]Stopped Editing.
+D1_L16=[53863]Project Closed.
+
+[Opened Files]
+1=7_segment_LED.c
+t1=1
+2=LED.c
+t2=6
+Count=1
+[7_segment_LED.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[defines]
+buildcount=5
+enabled=0
+chip=1
+D1=
+V1=
+[Units]
+Count=1
+1=7_segment_LED
+Link=0
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+[CompilerVersion]
+Fixed=

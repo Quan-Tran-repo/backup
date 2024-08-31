@@ -1,0 +1,74 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     i
+021     x
+022     y
+023     temp
+024     @TRIS_C
+025     @DIV88.P1
+025     @delay_ms1.P2
+025     up.@SCRATCH1
+025     down.@SCRATCH1
+026     @DIV88.P1
+027     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  Anode.call
+000008  Anode.data
+000012  @DIV88
+000027  @delay_ms1
+00003B  up
+000076  down
+0000B0  MAIN
+0000B0  @cinit1
+0000C7  @cinit2
+
+Project Directory:
+    C:\Users\Admin\Documents\Micro\7 seg LED\up down (update)\
+
+Project Files:
+    up down (update).c                                      [30-Mar-22 17:18  CRC=85084059]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Jan-21 11:32  CRC=461DBE83]
+
+Source signature=1143BD5F
+Program memory checksum=0000
+Hex file CRC=11E9
+
+Units:
+    C:\Users\Admin\Documents\Micro\7 seg LED\up down (update)\up down (update) (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   up down (update).xsym
+    Errors:      up down (update).err
+    Ext Symbols: up down (update).esym
+    INHX8:       up down (update).hex
+    Symbols:     up down (update).sym
+    List:        up down (update).lst
+    Debug/COFF:  up down (update).cof
+    Project:     up down (update).ccspjt
+    Call Tree:   up down (update).tre
+    Statistics:  up down (update).STA

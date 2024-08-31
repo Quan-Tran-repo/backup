@@ -1,0 +1,4 @@
+Compiling C:\Users\Admin\Documents\Micro\7 seg LED\up_down on 30-Mar-22 at 16:13
+*** Error 76 "C:\Users\Admin\Documents\Micro\7 seg LED\up_down.c" Line 17(5,6): Expect ;
+*** Error 51 "C:\Users\Admin\Documents\Micro\7 seg LED\up_down.c" Line 38(15,17): A numeric expression must appear here
+*** Error 51 "C:\Users\Admin\Documents\Micro\7 seg LED\up_down.c" Line 38(15,17): A numeric expression must appear here

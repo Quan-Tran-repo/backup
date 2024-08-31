@@ -1,0 +1,40 @@
+[PROJECT]
+Target=Interrupt.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=Interrupt.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\Interrupt\Interrupt]
+Type=4
+[mru-list]
+1=Interrupt.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=20-04-2022
+D1_L=5
+D1_L1=[61983]Project Opened.
+D1_L2=[61995]Started Editing.
+D1_L3=[62875]Stopped Editing.
+D1_L4=[62966]Started Editing.
+D1_L5=[63482]Stopped Editing.
+
+[Opened Files]
+1=Interrupt.c
+t1=1
+Count=1
+[Interrupt.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=Interrupt (main)

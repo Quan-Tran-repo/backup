@@ -1,0 +1,23 @@
+#INCLUDE <16F887.H>
+#FUSES NOWDT, PUT, HS, NOPROTECT, NOLVP
+#USE DELAY (CLOCK = 20M)
+#DEFINE N0 PIN_B0
+
+VOID MAIN()
+{
+   INT1 F10 = 0;
+   SET_TRIS_D(0X00);
+   SET_TRIS_B(0XFF);
+   OUTPUT_D(0X00);
+   IF(!N0)
+   {
+      F10 = 1;
+      WHILE(F10 = 1);
+      {
+         OUTPUT_D(0x01);
+         DELAY_MS (50);
+         OUTPUT_D(0x00);
+         DELAY_MS(50);
+      }
+   }
+}

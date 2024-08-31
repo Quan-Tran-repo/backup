@@ -1,0 +1,53 @@
+[PROJECT]
+Target=Timer.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=Timer.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\Timer\Timer]
+Type=4
+[mru-list]
+1=Timer.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=20-04-2022
+D1_L=14
+D1_L1=[57459]Project Opened.
+D1_L2=[57464]Started Editing.
+D1_L3=[57862]Stopped Editing.
+TotalEdit=45
+TotalDebug=0
+D1_E=45
+D1_D=0
+D1_L4=[57882]Started Editing.
+D1_L5=[58576]Stopped Editing.
+D1_L6=[58579]Started Editing.
+D1_L7=[58882]Stopped Editing.
+D1_L8=[59183]Started Editing.
+D1_L9=[60627]Stopped Editing.
+D1_L10=[60642]Started Editing.
+D1_L11=[61464]Stopped Editing.
+D1_L12=[61793]Started Editing.
+D1_L13=[61983]Stopped Editing.
+D1_L14=[61983]Project Closed.
+
+[Opened Files]
+1=Timer.c
+t1=41
+Count=1
+[Timer.c]
+Type=4
+
+[defines]
+buildcount=16
+[Units]
+Count=1
+1=Timer (main)

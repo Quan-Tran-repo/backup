@@ -1,0 +1,53 @@
+[PROJECT]
+Target=scanning.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=scanning.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\7 seg LED\scanning\scanning]
+Type=4
+[mru-list]
+1=scanning.c
+
+[ProjectLog]
+Days=1
+D1=06-04-2022
+D1_L=14
+D1_L1=[46193]Stopped Editing.
+TotalEdit=80
+TotalDebug=0
+D1_E=80
+D1_D=0
+D1_L2=[46194]Project Closed.
+D1_L3=[46194]Project Opened.
+D1_L4=[46223]Started Editing.
+D1_L5=[46706]Stopped Editing.
+D1_L6=[46840]Project Closed.
+D1_L7=[49543]Project Opened.
+D1_L8=[49622]Started Editing.
+D1_L9=[50082]Stopped Editing.
+D1_L10=[50145]Started Editing.
+D1_L11=[50560]Stopped Editing.
+D1_L12=[50560]Project Closed.
+D1_L13=[55075]Project Opened.
+D1_L14=[55137]Project Closed.
+
+[Opened Files]
+1=scanning.c
+t1=1
+Count=1
+
+[fileformats]
+forcecoff=0
+[scanning.c]
+Type=4
+
+[defines]
+buildcount=9
+[Units]
+Count=1
+1=scanning (main)

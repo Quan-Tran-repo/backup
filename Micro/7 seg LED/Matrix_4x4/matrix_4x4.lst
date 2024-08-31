@@ -1,0 +1,239 @@
+CCS PCM C Compiler, Version 5.101, 43599               13-Apr-22 13:48
+
+               Filename:   C:\Users\Admin\Documents\Micro\7 seg LED\Matrix_4x4\matrix_4x4.lst
+
+               ROM used:   160 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           11 (3%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   077
+0003:  NOP
+.................... #include <matrix_4x4.h>
+.................... #include <16F887.h>
+.................... //////////// Standard Header file for the PIC16F887 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F887
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  C0
+0009:  RETLW  F9
+000A:  RETLW  A4
+000B:  RETLW  B0
+000C:  RETLW  99
+000D:  RETLW  92
+000E:  RETLW  82
+000F:  RETLW  F8
+0010:  RETLW  80
+0011:  RETLW  90
+0012:  RETLW  88
+0013:  RETLW  83
+0014:  RETLW  C6
+0015:  RETLW  A1
+0016:  RETLW  86
+0017:  RETLW  8E
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... #use delay(crystal=20000000)
+.................... 
+.................... 
+.................... #FUSES NOWDT, PUT, HS, NOPROTECT, NOLVP
+.................... #USE DELAY(CLOCK=20M)
+*
+005E:  MOVLW  26
+005F:  MOVWF  04
+0060:  BCF    03.7
+0061:  MOVF   00,W
+0062:  BTFSC  03.2
+0063:  GOTO   071
+0064:  MOVLW  06
+0065:  MOVWF  78
+0066:  CLRF   77
+0067:  DECFSZ 77,F
+0068:  GOTO   067
+0069:  DECFSZ 78,F
+006A:  GOTO   066
+006B:  MOVLW  7B
+006C:  MOVWF  77
+006D:  DECFSZ 77,F
+006E:  GOTO   06D
+006F:  DECFSZ 00,F
+0070:  GOTO   064
+.................... const int8 Anode[16]= {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,
+.................... 0xF8,0x80,0x90,0x88,0x83,0xC6,0xA1,0x86,0x8E};
+.................... unsigned int8 keypad()
+*
+0018:  MOVLW  FF
+0019:  MOVWF  22
+001A:  MOVWF  24
+.................... {
+....................    unsigned int8 key=0xFF, col, row=0xFF,scan ;
+.................... check:
+....................    for (col=0,scan=0xFE; col<4; col++,scan=(scan<<1)+1)
+001B:  BCF    03.5
+001C:  BCF    03.6
+001D:  CLRF   23
+001E:  MOVLW  FE
+001F:  MOVWF  25
+0020:  MOVF   23,W
+0021:  SUBLW  03
+0022:  BTFSS  03.0
+0023:  GOTO   04F
+....................       {
+....................          output_b(scan);
+0024:  BSF    03.5
+0025:  CLRF   06
+0026:  BCF    03.5
+0027:  MOVF   25,W
+0028:  MOVWF  06
+....................          if (!input(pin_B4)) {row=0; break;}
+0029:  BSF    03.5
+002A:  BSF    06.4
+002B:  BCF    03.5
+002C:  BTFSC  06.4
+002D:  GOTO   030
+002E:  CLRF   24
+002F:  GOTO   04F
+....................          if (!input(pin_B5)) {row=1; break;}
+0030:  BSF    03.5
+0031:  BSF    06.5
+0032:  BCF    03.5
+0033:  BTFSC  06.5
+0034:  GOTO   038
+0035:  MOVLW  01
+0036:  MOVWF  24
+0037:  GOTO   04F
+....................          if (!input(pin_B6)) {row=2; break;}
+0038:  BSF    03.5
+0039:  BSF    06.6
+003A:  BCF    03.5
+003B:  BTFSC  06.6
+003C:  GOTO   040
+003D:  MOVLW  02
+003E:  MOVWF  24
+003F:  GOTO   04F
+....................          if (!input(pin_B7)) {row=3; break;}
+0040:  BSF    03.5
+0041:  BSF    06.7
+0042:  BCF    03.5
+0043:  BTFSC  06.7
+0044:  GOTO   048
+0045:  MOVLW  03
+0046:  MOVWF  24
+0047:  GOTO   04F
+0048:  MOVF   23,W
+0049:  INCF   23,F
+004A:  BCF    03.0
+004B:  RLF    25,W
+004C:  ADDLW  01
+004D:  MOVWF  25
+004E:  GOTO   020
+....................       }
+....................    if (row != 0xFF)
+004F:  INCFSZ 24,W
+0050:  GOTO   052
+0051:  GOTO   072
+....................       {
+....................          key= col*4+row;
+0052:  RLF    23,W
+0053:  MOVWF  77
+0054:  RLF    77,F
+0055:  MOVLW  FC
+0056:  ANDWF  77,F
+0057:  MOVF   77,W
+0058:  ADDWF  24,W
+0059:  MOVWF  22
+....................          row=0xFF;
+005A:  MOVLW  FF
+005B:  MOVWF  24
+....................          delay_ms(20); goto check;
+005C:  MOVLW  14
+005D:  MOVWF  26
+*
+0071:  GOTO   01B
+....................       }
+....................    return key;
+0072:  MOVF   22,W
+0073:  MOVWF  78
+0074:  BCF    0A.3
+0075:  BCF    0A.4
+0076:  GOTO   091 (RETURN)
+.................... }
+....................          
+.................... void main()
+0077:  MOVF   03,W
+0078:  ANDLW  1F
+0079:  MOVWF  03
+007A:  BSF    03.5
+007B:  BSF    03.6
+007C:  MOVF   09,W
+007D:  ANDLW  C0
+007E:  MOVWF  09
+007F:  BCF    03.6
+0080:  BCF    1F.4
+0081:  BCF    1F.5
+0082:  MOVLW  00
+0083:  BSF    03.6
+0084:  MOVWF  08
+0085:  BCF    03.5
+0086:  CLRF   07
+0087:  CLRF   08
+0088:  CLRF   09
+0089:  BCF    03.7
+.................... {  
+....................    unsigned int8 key;
+....................    set_tris_b(0xFF);
+008A:  MOVLW  FF
+008B:  BSF    03.5
+008C:  BCF    03.6
+008D:  MOVWF  06
+....................    set_tris_d(0xFF);
+008E:  MOVWF  08
+....................    while(TRUE)
+....................       {
+....................          key=keypad();
+008F:  BCF    03.5
+0090:  GOTO   018
+0091:  MOVF   78,W
+0092:  MOVWF  21
+....................          if (key!=0xFF)
+0093:  INCFSZ 21,W
+0094:  GOTO   096
+0095:  GOTO   09E
+....................             {
+....................                output_d(Anode[key]);
+0096:  MOVF   21,W
+0097:  CALL   004
+0098:  MOVWF  22
+0099:  BSF    03.5
+009A:  CLRF   08
+009B:  BCF    03.5
+009C:  MOVF   22,W
+009D:  MOVWF  08
+....................             }
+009E:  GOTO   090
+....................       }
+.................... 
+.................... }
+009F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

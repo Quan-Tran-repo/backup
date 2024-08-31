@@ -1,0 +1,5 @@
+Compiling C:\Users\Admin\Documents\Micro\7 seg LED\scanning\scanning on 06-Apr-22 at 13:59
+>>> Warning 202 "C:\Users\Admin\Documents\Micro\7 seg LED\scanning\scanning.c" Line 0(0,0): Variable never used:   Anode
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

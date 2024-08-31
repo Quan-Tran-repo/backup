@@ -1,0 +1,58 @@
+[PROJECT]
+Target=LED.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=LED.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\test\LED]
+Type=4
+[mru-list]
+1=LED.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=16-03-2022
+D1_L=8
+D1_L1=[54759]Project Opened.
+D1_L2=[54973]Started Editing.
+D1_L3=[55286]Stopped Editing.
+D1_L4=[55354]Started Editing.
+D1_L5=[55833]Project Opened.
+D1_L6=[55836]Started Editing.
+D1_L7=[56382]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L8=[74435]Project Closed.
+D2=17-03-2022
+D2_L=2
+D2_L1=[1735]Project Opened.
+D2_L2=[4381]Project Closed.
+D3=23-03-2022
+D3_L=3
+D3_L1=[38411]Project Opened.
+D3_L2=[38491]Project Opened.
+D3_L3=[38602]Project Closed.
+
+[Opened Files]
+1=LED.c
+t1=1
+2=..\main.c
+t2=1
+Count=1
+[LED.c]
+Type=4
+[Units]
+Count=1
+1=LED (main)
+
+[defines]
+buildcount=1

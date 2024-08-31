@@ -1,0 +1,67 @@
+[PROJECT]
+Target=Midterm_test.hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=Midterm_test.c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\Midterm Test\Midterm_test]
+Type=4
+[mru-list]
+1=Midterm_test.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=06-04-2022
+D1_L=12
+D1_L1=[55137]Project Opened.
+D1_L2=[55161]Started Editing.
+D1_L3=[55876]Stopped Editing.
+D1_L4=[56001]Started Editing.
+D1_L5=[61224]Stopped Editing.
+D1_L6=[62188]Started Editing.
+D1_L7=[62488]Stopped Editing.
+TotalEdit=90
+TotalDebug=0
+D1_E=89
+D1_D=0
+D1_L8=[63595]Project Closed.
+D1_L9=[64105]Project Opened.
+D1_L10=[64288]Project Closed.
+D1_L11=[76250]Project Opened.
+D1_L12=[83687]Project Closed.
+D2=07-04-2022
+D2_L=2
+D2_L1=[39372]Project Opened.
+D2_L2=[43149]Project Closed.
+D3=13-04-2022
+D3_L=6
+D3_L1=[45361]Project Opened.
+D3_L2=[46401]Project Closed.
+D3_L3=[49444]Project Opened.
+D3_L4=[49503]Started Editing.
+D3_L5=[49560]Stopped Editing.
+D3_E=1
+D3_D=0
+D3_L6=[49560]Project Closed.
+
+[Opened Files]
+1=..\7 seg LED\Matrix_4x4\matrix_4x4.c
+t1=21
+2=..\7 seg LED\Matrix_4x4\matrix_4x4.c
+t2=1
+Count=1
+[Midterm_test.c]
+Type=4
+
+[defines]
+buildcount=27
+[Units]
+Count=1
+1=Midterm_test (main)

@@ -1,0 +1,16 @@
+ÀÄup_down
+   ÀÄMAIN  0/55  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄup  0/55  Ram=1
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@const708  0/14  Ram=0
+      ³  ÃÄ@DIV88  0/21  Ram=3
+      ³  ÃÄ@const708  0/14  Ram=0
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÀÄdown  0/59  Ram=2
+         ÃÄ@DIV88  0/21  Ram=3
+         ÃÄ@const708  0/14  Ram=0
+         ÃÄ@DIV88  0/21  Ram=3
+         ÃÄ@const708  0/14  Ram=0
+         ÀÄ@delay_ms1  0/20  Ram=1

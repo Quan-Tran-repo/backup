@@ -1,0 +1,13 @@
+#include <Midterm_test.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+
+
+		//TODO: User Code
+	}
+
+}

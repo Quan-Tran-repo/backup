@@ -1,0 +1,71 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+021     MAIN.key
+022     keypad.key
+022     MAIN.@SCRATCH1
+023     keypad.col
+024     keypad.row
+025     keypad.scan
+026     @delay_ms2.P1
+026     keypad.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  Anode.call
+000008  Anode.data
+000018  keypad
+00005E  @delay_ms2
+000077  MAIN
+000077  @cinit1
+000089  @cinit2
+001B  check
+
+Project Directory:
+    C:\Users\Admin\Documents\Micro\7 seg LED\Matrix_4x4\
+
+Project Files:
+    matrix_4x4.c                                            [13-Apr-22 13:48  CRC=6CCC24FA]
+    matrix_4x4.h                                            [13-Apr-22 13:47  CRC=00000000]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Jan-21 11:32  CRC=461DBE83]
+
+Source signature=F907A200
+Program memory checksum=0000
+Hex file CRC=AAF0
+
+Units:
+    C:\Users\Admin\Documents\Micro\7 seg LED\Matrix_4x4\matrix_4x4 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   matrix_4x4.xsym
+    Errors:      matrix_4x4.err
+    Ext Symbols: matrix_4x4.esym
+    INHX8:       matrix_4x4.hex
+    Symbols:     matrix_4x4.sym
+    List:        matrix_4x4.lst
+    Debug/COFF:  matrix_4x4.cof
+    Project:     matrix_4x4.ccspjt
+    Call Tree:   matrix_4x4.tre
+    Statistics:  matrix_4x4.STA

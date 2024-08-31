@@ -1,0 +1,7 @@
+ÀÄmatrix_4x4
+   ÀÄMAIN  0/41  Ram=2
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄkeypad  0/95  Ram=5
+      ³  ÀÄ@delay_ms2  (Inline)  Ram=1
+      ÀÄ@const712  0/20  Ram=0

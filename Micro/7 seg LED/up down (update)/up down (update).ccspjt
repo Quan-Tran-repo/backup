@@ -1,0 +1,49 @@
+[PROJECT]
+Target=up down (update).hex
+Processor_Text=PIC16F887
+CCSVerions=5.101
+Compiler=PCM
+CCSVersion=5.101
+[Target Data]
+FileList=up down (update).c
+[Directories]
+Include=
+[C:\Users\Admin\Documents\Micro\7 seg LED\up down (update)\up down (update)]
+Type=4
+[mru-list]
+1=up down (update).c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=30-03-2022
+D1_L=10
+D1_L1=[58611]Project Opened.
+D1_L2=[58624]Started Editing.
+D1_L3=[60125]Stopped Editing.
+D1_L4=[60197]Started Editing.
+D1_L5=[61146]Stopped Editing.
+D1_L6=[62268]Started Editing.
+D1_L7=[62568]Stopped Editing.
+D1_L8=[62755]Started Editing.
+D1_L9=[62831]Stopped Editing.
+TotalEdit=33
+TotalDebug=0
+D1_E=33
+D1_D=0
+D1_L10=[62831]Project Closed.
+
+[Opened Files]
+1=up down (update).c
+t1=5
+Count=1
+[up down (update).c]
+Type=4
+
+[defines]
+buildcount=12
+[Units]
+Count=1
+1=up down (update) (main)

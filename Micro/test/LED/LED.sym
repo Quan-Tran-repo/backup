@@ -1,0 +1,63 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+021.0   MAIN.temp
+022     @delay_ms1.P1
+022     MAIN.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  led5hz
+00002A  led10hz
+00003C  MAIN
+00003C  @cinit1
+00004E  @cinit2
+
+Project Directory:
+    C:\Users\Admin\Documents\Micro\test\
+
+Project Files:
+    LED.c                                                   [16-Mar-22 15:34  CRC=1CD6308E]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [21-Jan-21 11:32  CRC=461DBE83]
+
+Source signature=A911AD94
+Program memory checksum=0000
+Hex file CRC=5DC6
+
+Units:
+    C:\Users\Admin\Documents\Micro\test\LED (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   LED.xsym
+    Errors:      LED.err
+    Ext Symbols: LED.esym
+    INHX8:       LED.hex
+    Symbols:     LED.sym
+    List:        LED.lst
+    Debug/COFF:  LED.cof
+    Project:     LED.ccspjt
+    Call Tree:   LED.tre
+    Statistics:  LED.STA

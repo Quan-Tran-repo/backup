@@ -1,0 +1,69 @@
+[System]
+Name='report6fuzzy'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='Ti'
+Range=[0 50]
+NumMFs=5
+MF1='Very_cold':'trapmf',[-11.25 -1.25 15 20]
+MF2='COLD':'trimf',[15 20 25]
+MF3='MEDIUM':'trimf',[20 25 30]
+MF4='HOT':'trimf',[25 30 35]
+MF5='Very_hot':'trapmf',[30 35 60 70]
+
+[Input2]
+Name='To'
+Range=[0 50]
+NumMFs=5
+MF1='VERY_COLD':'trapmf',[-11.25 -1.25 15 20]
+MF2='COLD':'trimf',[15 20 25]
+MF3='MEDIUM':'trimf',[20 25 30]
+MF4='HOT':'trimf',[25 30 35]
+MF5='VERY_HOT':'trapmf',[30 35 60 70]
+
+[Output1]
+Name='tocdoquat'
+Range=[0 600]
+NumMFs=5
+MF1='ZERO':'constant',[0]
+MF2='Cham':'constant',[150]
+MF3='Trung_binh':'constant',[300]
+MF4='Nhanh':'constant',[450]
+MF5='Max':'constant',[600]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 1 (1) : 1
+1 4, 2 (1) : 1
+1 5, 3 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 2 (1) : 1
+2 4, 3 (1) : 1
+2 5, 4 (1) : 1
+3 1, 1 (1) : 1
+3 2, 2 (1) : 1
+3 3, 3 (1) : 1
+3 4, 4 (1) : 1
+3 5, 5 (1) : 1
+4 1, 2 (1) : 1
+4 2, 3 (1) : 1
+4 3, 4 (1) : 1
+4 4, 4 (1) : 1
+4 5, 5 (1) : 1
+5 1, 3 (1) : 1
+5 2, 4 (1) : 1
+5 3, 5 (1) : 1
+5 4, 5 (1) : 1
+5 5, 5 (1) : 1

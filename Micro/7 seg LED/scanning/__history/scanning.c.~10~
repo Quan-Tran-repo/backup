@@ -1,0 +1,28 @@
+#include <16F887.h>
+#FUSES NOWDT, PUT, HS, NOPROTECT, NOLVP
+#USE DELAY(CLOCK=20M)
+const unsigned int8 Anode[10]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
+void id()
+{
+   output_c(Anode[1]);output_high(pin_d0);delay_ms(1);output_low(pin_d0);
+   output_c(Anode[9]);output_high(pin_d1);delay_ms(1);output_low(pin_d1);
+   output_c(Anode[1]);output_high(pin_d2);delay_ms(1);output_low(pin_d2);
+   output_c(Anode[5]);output_high(pin_d3);delay_ms(1);output_low(pin_d3);
+   output_c(Anode[1]);output_high(pin_d4);delay_ms(1);output_low(pin_d4);
+   output_c(Anode[0]);output_high(pin_d5);delay_ms(1);output_low(pin_d5);
+   output_c(Anode[7]);output_high(pin_d6);delay_ms(1);output_low(pin_d6);
+   output_c(Anode[8]);output_high(pin_d7);delay_ms(1);output_low(pin_d7);
+}
+void main()
+{
+   int8 temp=0;
+   set_tris_c(0x00);
+   set_tris_d(0x00);
+   set_tris_a(0xFF);
+   output_c(0xFF);
+   output_d(0xFF);
+   while(true)
+   {
+      id();
+   }
+}
